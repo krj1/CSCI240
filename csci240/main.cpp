@@ -1,14 +1,23 @@
-//
-//  main.cpp
-//  csci240
-//
-//  Created by Kurt Jackson on 8/23/22.
-//
+/***************************************************************
+CSCI 240         Program 0     Fall 2022
+
+Programmer: Kurt Jackson
+
+Section: 02
+
+Date Due:  8/26/2022
+
+Purpose: Compiler training
+***************************************************************/
 
 #include <iostream>
+#include <iomanip>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+
+int main()
+{
+cout << "hello, world";
+
+return 0;
 }
