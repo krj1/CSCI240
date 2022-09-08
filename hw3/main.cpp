@@ -58,7 +58,7 @@ int main() {
     //--------------------------------------------
 
     
-    // ---- displaying breakdown of bases claimed ---
+    // ---- displaying breakdown bases claimed ---
     cout << endl << endl << "singles:" << setw(5) << numOfSingles << "   doubles:" << setw(5) <<
     numDoubles <<  "   Triples:" << setw(5) <<  numTriples << "   Home Runs:" <<
     setw(5) << numOfRuns << endl;
