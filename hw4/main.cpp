@@ -18,16 +18,30 @@ Purpose: to generate three randomly sized sets of pseudo random numbers
 using namespace std;
 
 
-int counter() {
-    static int k = 0;
-    k++;
-    return k;
+int randTrack(int gate) {
+    static int evenRecord = 0;
+    
+    if (gate == 1){
+        evenRecord = 0;
+        return 0;
+    }
+    else if (gate == 2){
+        return evenRecord;
+    }
+    
+    int output = rand();
+    
+    if (output % 2 == 0){
+        evenRecord++;
+        //mark = 1;
+    }
+    return output;
 }
 
 void showRandLine(int length) {
     
     for (int i = 0; i < length; i++) {
-        cout << setw(12) << rand(); //counter();
+        cout << setw(12) << randTrack(0); //counter();
     }
     cout << endl;
     
@@ -41,7 +55,7 @@ void randBlock(int len, int setL) {
     }
     
     for (int i = 0; i < len % setL; i++) {
-        cout << setw(12) << rand(); //counter();
+        cout << setw(12) << randTrack(0); //counter();
     }
     cout << endl;
     
@@ -67,20 +81,32 @@ int main() {
     cout << "First set of numbers: " << len1 << " values \n\n";
     randBlock(len1, setL1);
     cout << endl;
+    int track1 = randTrack(2);
+    randTrack(1);
     
     int len2 = (rand() % set2) + 1;
 
     cout << "First set of numbers: " << len2 << " values \n\n";
     randBlock(len2, setL2);
     cout << endl;
+    int track2 = randTrack(2);
+    randTrack(1);
+    
     
     int len3 = (rand() % set3) + 1;
     
     cout << "First set of numbers: " << len3 << " values \n\n";
     randBlock(len3, setL3);
     cout << endl;
+    int track3 = randTrack(2);
+    randTrack(1);
     
     
+    
+    cout << "Number of even values" << endl;
+    cout << "set 1" << setw(8) << track1 << endl;
+    cout << "set 2" << setw(8) << track2 << endl;
+    cout << "set 3" << setw(8) << track3 << endl;
 
     
     
