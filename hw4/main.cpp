@@ -18,7 +18,7 @@ Purpose: to generate three randomly sized sets of pseudo random numbers
 using namespace std;
 
 
-int randTrack(int gate) {
+int randTrack(int gate, int &mark) {
     static int evenRecord = 0;
     
     if (gate == 1){
@@ -30,18 +30,31 @@ int randTrack(int gate) {
     }
     
     int output = rand();
+    mark = 0;
+    
     
     if (output % 2 == 0){
         evenRecord++;
-        //mark = 1;
+        mark = 1;
     }
     return output;
 }
 
 void showRandLine(int length) {
+    int mark;
+    
     
     for (int i = 0; i < length; i++) {
-        cout << setw(12) << randTrack(0); //counter();
+        int slacker = randTrack(0, mark);
+        if (mark == 1) {
+            cout  << setw(12) << slacker << "--"; //counter();
+        }
+        else {
+            cout << setw(12) << slacker << "  "; //counter();
+        }
+        
+        
+
     }
     cout << endl;
     
@@ -49,13 +62,21 @@ void showRandLine(int length) {
 }
 
 void randBlock(int len, int setL) {
+    int mark;
     
     for (int i = 0; i < len / setL; i++) {
         showRandLine(setL);
     }
     
+    
     for (int i = 0; i < len % setL; i++) {
-        cout << setw(12) << randTrack(0); //counter();
+        int slacker = randTrack(0, mark);
+        if (mark == 1) {
+            cout << setw(12) << slacker << "--" ; //counter();
+        }
+        else {
+            cout << setw(12) << slacker << "  "; //counter();
+        }
     }
     cout << endl;
     
@@ -72,7 +93,7 @@ int main() {
     const int setL1 = 5;
     const int setL2 = 6;
     const int setL3 = 7;
-    
+    int non;
     
     
     int len1 = (rand() % set1) + 1;
@@ -81,16 +102,16 @@ int main() {
     cout << "First set of numbers: " << len1 << " values \n\n";
     randBlock(len1, setL1);
     cout << endl;
-    int track1 = randTrack(2);
-    randTrack(1);
+    int track1 = randTrack(2, non);
+    randTrack(1, non);
     
     int len2 = (rand() % set2) + 1;
 
     cout << "First set of numbers: " << len2 << " values \n\n";
     randBlock(len2, setL2);
     cout << endl;
-    int track2 = randTrack(2);
-    randTrack(1);
+    int track2 = randTrack(2, non);
+    randTrack(1, non);
     
     
     int len3 = (rand() % set3) + 1;
@@ -98,8 +119,8 @@ int main() {
     cout << "First set of numbers: " << len3 << " values \n\n";
     randBlock(len3, setL3);
     cout << endl;
-    int track3 = randTrack(2);
-    randTrack(1);
+    int track3 = randTrack(2, non);
+    randTrack(1, non);
     
     
     
