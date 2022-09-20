@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E20B678A28D4DD1F009577C1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2A5412528C28B4700C7FE1F /* main.cpp */; };
+		E20B679328DA050D009577C1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E20B676E28CD0249009577C1 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +86,9 @@
 		E20B677C28D13331009577C1 /* quiz.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quiz.cpp; sourceTree = "<group>"; };
 		E20B678328D38FF9009577C1 /* hw5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hw5; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20B678528D38FF9009577C1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E20B678C28D9681A009577C1 /* is_multiple.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = is_multiple.cpp; sourceTree = "<group>"; };
+		E20B678F28D96BBA009577C1 /* letter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = letter.cpp; sourceTree = "<group>"; };
+		E20B679128D96E90009577C1 /* count.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = count.cpp; sourceTree = "<group>"; };
 		E260969D28B55C7C00175475 /* csci240 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = csci240; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A540F828B5818F00C7FE1F /* hw1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hw1; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A540FA28B5818F00C7FE1F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -156,6 +159,9 @@
 				E20B677428D0DB38009577C1 /* decisions.cpp */,
 				E20B677C28D13331009577C1 /* quiz.cpp */,
 				E20B677928D1298F009577C1 /* sales_format.cpp */,
+				E20B678C28D9681A009577C1 /* is_multiple.cpp */,
+				E20B678F28D96BBA009577C1 /* letter.cpp */,
+				E20B679128D96E90009577C1 /* count.cpp */,
 			);
 			path = random;
 			sourceTree = "<group>";
@@ -440,7 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E20B678A28D4DD1F009577C1 /* main.cpp in Sources */,
+				E20B679328DA050D009577C1 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

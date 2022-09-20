@@ -17,10 +17,17 @@ Purpose: to generate three randomly sized sets of pseudo random numbers
 
 using namespace std;
 
+
+int counter() {
+    static int k = 0;
+    k++;
+    return k;
+}
+
 void showRandLine(int length) {
     
-    for (int i = 0; i <= length; i++) {
-        cout << setw(12) << rand();
+    for (int i = 0; i < length; i++) {
+        cout << setw(12) << rand(); //counter();
     }
     cout << endl;
     
@@ -34,7 +41,7 @@ void randBlock(int len, int setL) {
     }
     
     for (int i = 0; i < len % setL; i++) {
-        cout << setw(12) << rand();
+        cout << setw(12) << rand(); //counter();
     }
     cout << endl;
     
@@ -55,23 +62,21 @@ int main() {
     
     
     int len1 = (rand() % set1) + 1;
-    int len2 = (rand() % set2) + 1;
-    int len3 = (rand() % set3) + 1;
+
     
-    
-    cout << "First set of numbers: " << len1 << " values\n\n";
+    cout << "First set of numbers: " << len1 << " values \n\n";
     randBlock(len1, setL1);
     cout << endl;
     
-    
-    
-    cout << "First set of numbers: " << len2 << " values\n\n";
+    int len2 = (rand() % set2) + 1;
+
+    cout << "First set of numbers: " << len2 << " values \n\n";
     randBlock(len2, setL2);
     cout << endl;
     
+    int len3 = (rand() % set3) + 1;
     
-    
-    cout << "First set of numbers: " << len3 << " values\n\n";
+    cout << "First set of numbers: " << len3 << " values \n\n";
     randBlock(len3, setL3);
     cout << endl;
     
